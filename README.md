@@ -14,3 +14,4 @@ Note that by the time when this version is writing, Codeigniter is at 3.0 rc3 an
   `vendor/bin/doctrine orm:schema-tool:create`
 - or force to update
   `vendor/bin/doctrine orm:schema-tool:update --force`
+- checking results on http://localhost/{YOUR_PROJECT_DIR}/index.php
