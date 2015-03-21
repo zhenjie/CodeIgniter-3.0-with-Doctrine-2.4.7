@@ -22,7 +22,19 @@ class Welcome extends CI_Controller {
   {
     // verify doctrine has been loaded correctly
     $em = $this->doctrine->em;
-    
+
+    $user = new Entities\User;
+    $user->setName("Zhenjie Chen");
+    $em->persist($user);
+    $em->flush();
+    echo "New user: " . $user->getId() . "<br/>";
+
+    $user = new models\BadUser;
+    $user->setName("Heisenberg");
+    $em->persist($user);
+    $em->flush();
+    echo "New bad user: " . $user->getId() . "<br/>";
+
     $this->load->view('welcome_message');
   }
 }
