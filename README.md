@@ -8,9 +8,9 @@ Note that by the time when this version is writing, Codeigniter is at 3.0 rc3 an
 - run `php composer.phar update` to install required package(s)
 - double check the database is up and running
 - generate schemas using
-  vendor/bin/doctrine orm:schema-tool:create
+  `vendor/bin/doctrine orm:schema-tool:create`
 - to recreate your schemas
-  vendor/bin/doctrine orm:schema-tool:drop --force
-  vendor/bin/doctrine orm:schema-tool:create
+  `vendor/bin/doctrine orm:schema-tool:drop --force`
+  `vendor/bin/doctrine orm:schema-tool:create`
 - or force to update
-  vendor/bin/doctrine orm:schema-tool:update --force
+  `vendor/bin/doctrine orm:schema-tool:update --force`
