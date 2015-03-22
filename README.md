@@ -15,3 +15,17 @@ Note that by the time when this version is writing, Codeigniter is at 3.0 rc3 an
 - or force to update
   `vendor/bin/doctrine orm:schema-tool:update --force`
 - checking results on http://localhost/{YOUR_PROJECT_DIR}/index.php
+
+
+# Using models from other application
+To use models from other application,
+- we have an application with modles available in applications/models
+- create new application with name admin
+- in the admin.php, define COMMON_MODEL_PATH
+  `define('COMMON_MODEL_PATH', APPPATH.'../application/models/');`
+- in admin/libraries/Doctrine.php, adjust ClassLoader with models path for application
+- in admin/config/autoload.php, auto load library 'doctrine'
+- free to use every models we have in application using Doctrine
+
+Note that we can also autoload packages(can be set in admin/config/autoload.php),
+but not sure how that would work with Doctrine.
