@@ -68,13 +68,13 @@ class Doctrine {
     // Database connection information
     $connectionOptions = array(
 			       'driver' => 'pdo_mysql',
-			       'user' =>     $db['default']['username'],
-			       'password' => $db['default']['password'],
-			       'host' =>     $db['default']['hostname'],
-			       'dbname' =>   $db['default']['database'],
-			       'charset' => $db['default']['char_set'],
+			       'user' =>     $db[$active_group]['username'],
+			       'password' => $db[$active_group]['password'],
+			       'host' =>     $db[$active_group]['hostname'],
+			       'dbname' =>   $db[$active_group]['database'],
+			       'charset' => $db[$active_group]['char_set'],
 			       'driverOptions' =>
-			       array('charset' => $db['default']['char_set']));
+			       array('charset' => $db[$active_group]['char_set']));
 
     // Create EntityManager
     $this->em = EntityManager::create($connectionOptions, $config);
