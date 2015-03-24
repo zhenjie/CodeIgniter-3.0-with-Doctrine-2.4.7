@@ -1,4 +1,4 @@
-# ci3-dt2
+# Codeigniter 3.0 integrated with Doctrine 2.4.7
 Codeigniter 3.0 integrated with Doctrine 2.5.0
 
 Note that by the time when this version is writing, Codeigniter is at 3.0 rc3 and Doctrine ORM is at 2.4.7.
@@ -15,3 +15,12 @@ Note that by the time when this version is writing, Codeigniter is at 3.0 rc3 an
 - or force to update
   `vendor/bin/doctrine orm:schema-tool:update --force`
 - checking results on http://localhost/{YOUR_PROJECT_DIR}/index.php
+
+
+# Using models from other application
+To use models from other app called `application`,
+- we have an app with modles available in `applications/models`
+- create new app with name admin: `admin.php` and app folder `admin`
+- in `admin/config/autoload.php`, auto load library `doctrine`
+- in `admin/config/autoload.php`, auto load package `application` with correct path
+- free to use every models we have in `application` using Doctrine
