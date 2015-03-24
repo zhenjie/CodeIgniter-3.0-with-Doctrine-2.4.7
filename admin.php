@@ -283,10 +283,6 @@ switch (ENVIRONMENT)
 
 	define('VIEWPATH', $view_folder);
 
-// This would be used in libraries/Doctrine.php to reuse the models for application
-define('COMMON_MODEL_PATH', APPPATH.'../application/models/');
-
-
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
